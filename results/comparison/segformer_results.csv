@@ -1,0 +1,4 @@
+Metric,SegFormer
+Mean IoU,0.873
+Mean Dice,0.9288
+Pixel Accuracy,0.9268
