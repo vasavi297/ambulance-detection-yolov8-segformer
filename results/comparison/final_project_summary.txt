@@ -1,0 +1,50 @@
+
+================================================================
+AMBULANCE DETECTION PROJECT - FINAL RESULTS
+================================================================
+
+PHASE 1: YOLOv8 DETECTION
+----------------------------------------------------------------
+Model: YOLOv8n (pre-trained on COCO)
+Dataset: 3000+ images from 10 countries
+Training: 100 epochs
+Device: Tesla T4 GPU
+
+Results:
+  Precision:    97.6%
+  Recall:       94.9%
+  mAP50:        97.9%
+  mAP50-95:     86.3%
+  F1-Score:     96.2%
+
+PHASE 2: SEGFORMER SEGMENTATION
+----------------------------------------------------------------
+Model: SegFormer-B0 (fine-tuned on ambulance dataset)
+Dataset: 2001 train / 1000 val images
+Training: 5 epochs
+Device: Tesla T4 GPU
+
+Results (evaluated on 100 validation images):
+  Mean IoU:         0.8730
+  Mean Dice:        0.9288
+  Pixel Accuracy:   0.9268
+  Min IoU:          0.4143
+  Max IoU:          0.9579
+
+COMPARISON WITH BASE PAPER
+----------------------------------------------------------------
+Metric              Base Paper      Our Result      Status
+Precision           97.6%           97.6%           MATCHED
+Recall              95.8%           94.9%           CLOSE
+mAP50               98.2%           97.9%           MATCHED
+F1-Score            96.7%           96.2%           CLOSE
+
+ENHANCEMENT
+----------------------------------------------------------------
+Base paper only provided bounding box detection.
+This project adds SegFormer for pixel-level segmentation.
+SegFormer achieves 87.3% IoU and 92.9% Dice on ambulance segmentation.
+
+================================================================
+PROJECT COMPLETE
+================================================================

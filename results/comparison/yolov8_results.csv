@@ -1,0 +1,6 @@
+Metric,YOLOv8
+Precision,0.976
+Recall,0.949
+mAP50,0.979
+mAP50-95,0.863
+F1-Score,0.962
